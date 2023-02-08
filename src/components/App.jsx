@@ -27,7 +27,6 @@ export class App extends Component {
       return true;
     }
     this.setState(({ contacts }) => ({ contacts: [...contacts, newContact] }));
-    console.log(this.state);
   };
 
   contacts = () => {
@@ -55,7 +54,7 @@ export class App extends Component {
         <Filter filter={filter} onChange={this.handelFilterContacts} />
         <ContactList
           contacts={contacts}
-          removeContact={this.handelRemoveContact}
+          onRemoveContact={this.handelRemoveContact}
         ></ContactList>
       </div>
     );

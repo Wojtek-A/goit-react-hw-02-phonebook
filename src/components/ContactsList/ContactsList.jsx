@@ -1,6 +1,6 @@
 import css from './ContactList.module.css';
 
-export const ContactList = ({ contacts, removeContact, children }) => {
+export const ContactList = ({ contacts, onRemoveContact, children }) => {
   return (
     <div>
       {children}
@@ -11,7 +11,7 @@ export const ContactList = ({ contacts, removeContact, children }) => {
               {contact.name}: {contact.number}
               <button
                 onClick={() => {
-                  removeContact(contact.id);
+                  onRemoveContact(contact.id);
                 }}
                 className={css.button}
               >

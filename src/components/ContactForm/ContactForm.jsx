@@ -25,13 +25,11 @@ export class ContactForm extends Component {
 
     onAdd({ id: nanoid(), name, number });
     this.reset();
-    console.log(this.state);
   };
 
   handleChange = evt => {
     const { value, name } = evt.target;
     this.setState({ [name]: value });
-    console.log(this.state, value);
   };
 
   reset = () => {
